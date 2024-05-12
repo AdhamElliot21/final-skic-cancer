@@ -7,7 +7,9 @@ import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../spacer.dart';
 import 'doctor_card.dart';
-// import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+final Uri _url = Uri.parse('https://www.vezeeta.com/ar/%D8%AF%D9%83%D8%AA%D9%88%D8%B1/%D8%AE%D8%AF%D9%85%D8%A9/%D8%A3%D9%88%D8%B1%D8%A7%D9%85-%D8%A7%D9%84%D8%AC%D9%84%D8%AF/%D9%83%D9%84-%D8%A7%D9%84%D8%AA%D8%AE%D8%B5%D8%B5%D8%A7%D8%AA/%D9%85%D8%B5%D8%B1');
 
 class govrernment extends StatelessWidget {
   final String govername;
@@ -26,7 +28,6 @@ class govrernment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var mediaquery = MediaQuery.of(context).size;
-
     return SingleChildScrollView(
       child: Center(
         child: Column(
@@ -108,16 +109,8 @@ class govrernment extends StatelessWidget {
                                         letterSpacing: 5,
                                         color: Colors.white,
                                         fontWeight: FontWeight.w300),
-                                    onPress: () async{
-                                      // final url = 'https://www.vezeeta.com/ar/%D8%AF%D9%83%D8%AA%D9%88%D8%B1/%D8%AC%D8%B1%D8%A7%D8%AD%D8%A9-%D8%A3%D9%88%D8%B1%D8%A7%D9%85/%D9%85%D8%B5%D8%B1';
-                                      // if (await canLaunch(url)) {
-                                      //   await launch(url);
-                                      // } else {
-                                      //   throw 'Could not launch $url';
-                                      }
-                                    // },
+                                    onPress: _launchUrl,
                                   ),
-
                                 ],
                               ),
                             ),
@@ -245,5 +238,11 @@ class govrernment extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+Future<void> _launchUrl() async {
+  if (!await launchUrl(_url)) {
+    throw Exception('Could not launch $_url');
   }
 }
