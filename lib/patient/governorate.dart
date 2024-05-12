@@ -31,18 +31,6 @@ class govrernment extends StatelessWidget {
       child: Center(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 30, right: 308.0),
-              child: GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: Icon(
-                    Icons.arrow_back,
-                    size: 30,
-                    color: Colors.black,
-                  )),
-            ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
@@ -150,27 +138,27 @@ class govrernment extends StatelessWidget {
                                   height: 100,
                                   width: 100,
                                 ),
-                                AnimatedTextKit(
-                                  isRepeatingAnimation: true,
-                                  animatedTexts: [
-                                    ColorizeAnimatedText(
-                                        "closest hospital",
-                                        textAlign: TextAlign.center,
-                                        textStyle: GoogleFonts.roboto(
-                                            fontSize: 22.0,
-                                            fontWeight: FontWeight.w600),
-                                        colors: <Color>[
-                                          Color.fromRGBO(255, 255, 255, 1.0),
-                                          Color.fromRGBO(25, 152, 140, 1.0),
-                                          Colors.black,
-                                          Colors.grey,
-                                        ]),
-                                  ],
-                                  repeatForever: true,
-                                  onTap: () {
-                                    print("Tap Event");
-                                  },
-                                ),
+                                // AnimatedTextKit(
+                                //   isRepeatingAnimation: true,
+                                //   animatedTexts: [
+                                //     ColorizeAnimatedText(
+                                //         "closest hospital",
+                                //         textAlign: TextAlign.center,
+                                //         textStyle: GoogleFonts.roboto(
+                                //             fontSize: 22.0,
+                                //             fontWeight: FontWeight.w600),
+                                //         colors: <Color>[
+                                //           Color.fromRGBO(255, 255, 255, 1.0),
+                                //           Color.fromRGBO(25, 152, 140, 1.0),
+                                //           Colors.black,
+                                //           Colors.grey,
+                                //         ]),
+                                //   ],
+                                //   repeatForever: true,
+                                //   onTap: () {
+                                //     print("Tap Event");
+                                //   },
+                                // ),
                                 Container(
                                   width: mediaquery.width/1.3,
                                   height: mediaquery.height/3,
