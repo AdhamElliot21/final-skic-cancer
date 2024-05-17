@@ -23,7 +23,13 @@ class govrernment extends StatelessWidget {
   final String doctorrate2;
   final String doctortime2;
   final String doctorphoto2;
-  const govrernment({super.key, required this.govername, required this.doctorName, required this.doctoraddress, required this.doctorrate, required this.doctortime, required this.doctorphoto, required this.doctorName2, required this.doctoraddress2, required this.doctorrate2, required this.doctortime2, required this.doctorphoto2,});
+  final String hospital1;
+  final String hospitalname1;
+  final String hospital2;
+  final String hospitalname2;
+
+
+  const govrernment({super.key, required this.govername, required this.doctorName, required this.doctoraddress, required this.doctorrate, required this.doctortime, required this.doctorphoto, required this.doctorName2, required this.doctoraddress2, required this.doctorrate2, required this.doctortime2, required this.doctorphoto2, required this.hospital1, required this.hospital2, required this.hospitalname1, required this.hospitalname2,});
 
   @override
   Widget build(BuildContext context) {
@@ -171,7 +177,7 @@ class govrernment extends StatelessWidget {
                                       side: CardSide.FRONT,
                                       // The side to initially display.
                                       front: Image.asset(
-                                        "assets/images/pngs/sohag hospital1.jpg",
+                                        hospital1,
                                         height: mediaquery.height/4,
                                         width: mediaquery.width/1.4,
                                         fit: BoxFit.fill,
@@ -179,7 +185,7 @@ class govrernment extends StatelessWidget {
                                       back:  Container(
                                         color:Color.fromRGBO(25, 152, 140, 1.0),
                                         child: Center(
-                                          child: Text("sohag university hospital",textAlign: TextAlign.center,style: TextStyle(
+                                          child: Text(hospitalname1,textAlign: TextAlign.center,style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 30.0,
                                             fontWeight: FontWeight.w600,
@@ -209,13 +215,13 @@ class govrernment extends StatelessWidget {
                                       side: CardSide.FRONT,
                                       // The side to initially display.
                                       front: Image.asset(
-                                        "assets/images/pngs/sohag hospital1.jpg",
+                                        hospital2,
                                         height: mediaquery.height/4,
                                         width: mediaquery.width/1.4,
                                         fit: BoxFit.fill,
                                       ),
                                       back:  Center(
-                                        child: Text("sohag university hospital",style: TextStyle(
+                                        child: Text(hospitalname2,style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 30.0,
                                           fontWeight: FontWeight.w600,

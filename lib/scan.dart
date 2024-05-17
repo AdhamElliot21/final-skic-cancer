@@ -8,8 +8,10 @@ import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:test/pages_chat/room.dart';
+import 'package:test/patient/Scan_upload2.dart';
 import 'package:test/patient/home.dart';
 import 'package:test/patient/scan_upload.dart';
+import 'package:test/patient/testmodel.dart';
 import 'package:test/services.dart';
 import 'package:test/settings.dart';
 
@@ -284,7 +286,7 @@ class _scanState extends State<scan> {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => scanUpload()));
+                                              builder: (context) => testmodel()));
 
                                     },
                                     // onTap: uploadImage,
@@ -325,7 +327,7 @@ class _scanState extends State<scan> {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => scanUpload()));
+                                              builder: (context) => scan2()));
                                     },
 
                                     // onTap: takeImage,
